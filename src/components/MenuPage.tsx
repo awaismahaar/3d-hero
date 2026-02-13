@@ -1,9 +1,6 @@
-/* eslint-disable react-refresh/only-export-components */
 import { AnimatePresence, motion } from "framer-motion";
-import { FaAngleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../styles/MenuPage.style.css";
-import transition from "../transition";
 interface MenuPageProps {
   open: boolean;
   setOpen: (open: boolean) => void;

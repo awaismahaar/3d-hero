@@ -1,14 +1,11 @@
-/* eslint-disable react-refresh/only-export-components */
 import { useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import HeroModel from "./components/HeroModel";
 import { CiMenuFries } from "react-icons/ci";
 import { FaAngleRight } from "react-icons/fa";
-import transition from "./transition";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import MenuPage from "./components/MenuPage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -340,7 +337,7 @@ function App() {
 
 export default App;
 
-const texts = {
+const texts: Record<string, string[]> = {
   mat1: [
     "2016-2017",
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia similique id, fugit unde error blanditiis.",

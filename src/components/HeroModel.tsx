@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
-import { OrbitControls, useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -44,7 +44,7 @@ const HeroModel = ({ currentMaterial = "normalMap" }: HeroModelProps) => {
 
   // Camera + renderer setup (run once on mount)
   useEffect(() => {
-    camera.position.z = 1.2;
+    camera.position.z! = 1.2;
     gl.toneMapping = THREE.ReinhardToneMapping;
     gl.outputColorSpace = THREE.SRGBColorSpace; // correct color rendering
   }, [camera, gl]);
@@ -127,7 +127,7 @@ const HeroModel = ({ currentMaterial = "normalMap" }: HeroModelProps) => {
     if (currentTexName.current === currentMaterial) return;
 
     const matcapMaterial = matcapMaterialRef.current;
-    const shader = matcapMaterial?.userData.shader as THREE.Shader | undefined;
+    const shader = matcapMaterial?.userData.shader;
     if (!matcapMaterial || !shader) return;
 
     // Set the next texture and animate uProgress (0 -> 1)
