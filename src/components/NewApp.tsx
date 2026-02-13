@@ -1,4 +1,4 @@
-import {
+/* import {
   FirstPersonControls,
   GizmoHelper,
   GizmoViewcube,
@@ -59,7 +59,7 @@ function DirectionalLightWithHelper() {
       <meshStandardMaterial map={texture}/>
     </mesh>
   );
-} */
+} 
 function UpdateSceneBackground() {
   const { scene } = useThree();
 
@@ -78,7 +78,7 @@ function UpdateSceneBackground() {
   scene.background! = texture;
 
   return null;
-} */
+} 
 function BoxWithTexture() {
   const texture1 = useTexture("/mat-1.png");
   const texture2 = useTexture("/mat-2.png");
@@ -188,9 +188,9 @@ function RenderMeshShape() {
       }}
       onClick={handleClick}
     >
-      {/* Geometry means shape */}
+      {/* Geometry means shape 
       <boxGeometry args={[3, 3, 2]} />
-      {/* Material means colors, surface */}
+      {/* Material means colors, surface 
       <meshStandardMaterial color={color} wireframe={wireframe} />
     </mesh>
   );
@@ -218,17 +218,17 @@ const NewApp = () => {
       >
         <Model />
         <OrbitControls />
-        {/* <SphereWithTexture /> */}
+        {/* <SphereWithTexture /> 
 
         <BoxWithTexture />
 
         <UpdateSceneBackground />
-        {/*  <mesh scale={[2,2,2]} rotation={[2,22,Math.PI/8]}> */}
+        {/*  <mesh scale={[2,2,2]} rotation={[2,22,Math.PI/8]}> 
         {/*   <GizmoHelper alignment="bottom-right" margin={[80, 80]}>
           <GizmoViewport />
         </GizmoHelper>
-        <RenderMeshShape /> */}
-        {/* <directionalLight position={[8, 8, 8]} /> */}
+        <RenderMeshShape /> 
+        {/* <directionalLight position={[8, 8, 8]} />
         <RenderMeshShape />
         <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
           <planeGeometry args={[20, 20]} />
@@ -239,12 +239,13 @@ const NewApp = () => {
         <OrbitControls />
         <DirectionalLightWithHelper />
         <AudioComponent />
-        {/* <SpotLightHelp /> */}
-        {/* <axesHelper args={[10]} /> */}
-        {/* <gridHelper args={[20, 20, "red", "yellow"]} /> */}
+        {/* <SpotLightHelp /> 
+        {/* <axesHelper args={[10]} /> 
+        {/* <gridHelper args={[20, 20, "red", "yellow"]} /> 
       </Canvas>
     </div>
   );
 };
 
 export default NewApp;
+ */
