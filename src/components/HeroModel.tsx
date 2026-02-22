@@ -1,10 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import {
-  Html,
   useGLTF,
-  useProgress,
   useTexture,
 } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
