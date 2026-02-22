@@ -16,6 +16,10 @@ body,
   background-color: black;
   color: white;
 }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 main {
   position: relative;
   max-width: 1446px;

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import HeroModel from "./components/HeroModel";
 import { CiMenuFries } from "react-icons/ci";
@@ -6,6 +6,7 @@ import { FaAngleRight } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Loader } from "@react-three/drei";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -134,7 +135,9 @@ function App() {
             zIndex: 1,
           }}
         >
-          <HeroModel currentMaterial={hoveredCard} />
+          <Suspense fallback={null}>
+            <HeroModel currentMaterial={hoveredCard} />
+          </Suspense>
         </Canvas>
         <section id="section-1">
           <nav>
@@ -322,6 +325,8 @@ function App() {
           </footer>
         </section>
       </main>
+        <Loader />
+
       <div
         className="bottom-right-text"
         ref={bottomRightRef}
