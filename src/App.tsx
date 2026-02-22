@@ -325,7 +325,10 @@ function App() {
           </footer>
         </section>
       </main>
-        <Loader />
+      <div style={{position : 'fixed', width : '100%' , height : '100vh' , zIndex : 9999 , top : 0,left : 0}}>
+         <Loader />
+      </div>
+       
 
       <div
         className="bottom-right-text"
